@@ -2,12 +2,12 @@ package org.AnimalRescuer;
 
 public class Animal {
 
-    String petName;
+    String name;
     double age;
     double health;
     double hungryLevel;
     double moodLevel;
     String favoriteFood;
-    String favoriteActivity;
+    String activity;
 
 }

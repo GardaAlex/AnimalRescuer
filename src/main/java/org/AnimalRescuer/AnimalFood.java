@@ -4,9 +4,9 @@ import java.time.LocalDateTime;
 
 public class AnimalFood {
 
-    String foodName;
-    double foodPrice;
+    String name;
+    double price;
     double foodAmount;
     LocalDateTime expiryDate;
-    boolean foodStock;
+    boolean stock;
 }
