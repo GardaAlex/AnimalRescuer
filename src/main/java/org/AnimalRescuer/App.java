@@ -34,11 +34,9 @@ public class App
         veterinarian.setSpecialization("Surgery");
 
         Game game = new Game();
-        game.adopter = adopter;
-        game.animal = animal;
-        game.veterinarian = veterinarian;
-
-
+        game.setAdopter(adopter);
+        game.setAnimal(animal);
+        game.setVeterinarian(veterinarian);
 
 
 
