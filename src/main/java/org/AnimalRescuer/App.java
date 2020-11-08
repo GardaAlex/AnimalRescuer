@@ -25,7 +25,7 @@ public class App
         food.setFoodAmount(25.3);
         food.setPrice(44);
         food.setStock(true);
-        food.setExpiryDate(LocalDateTime.of(2021,11,11,12,00);
+        food.setExpiryDate(LocalDateTime.of(2021,11,11,12,00));
 
         RecreationActivity activity = new RecreationActivity("Walking");
 
@@ -42,5 +42,12 @@ public class App
         Adopter.feeding(animal, food);
         Adopter.activity(activity, animal);
 
+        Animal dog = new Dog();
+        dog.setName("Cookie");
+        dog.joy();
+
+        Animal fish = new Fish();
+        fish.setName("Pluto");
+        fish.joy();
     }
 }
