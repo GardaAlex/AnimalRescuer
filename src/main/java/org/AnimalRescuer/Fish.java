@@ -4,6 +4,11 @@ public class Fish extends Animal {
 
     private int fins;
 
+    @Override
+    public void joy() {
+        System.out.println(getName() + " is swiming.  ");
+    }
+
     public int getFins() {
         return fins;
     }
@@ -11,4 +16,6 @@ public class Fish extends Animal {
     public void setFins(int fins) {
         this.fins = fins;
     }
+
+
 }

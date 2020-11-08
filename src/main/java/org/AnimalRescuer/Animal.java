@@ -65,4 +65,8 @@ public class Animal {
     public void setActivity(String activity) {
         this.activity = activity;
     }
+
+    public void joy(){
+        System.out.println(name + " is feeling positive");
+    }
 }
