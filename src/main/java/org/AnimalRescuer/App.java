@@ -20,6 +20,7 @@ public class App
         animal.setMoodLevel(6);
         animal.setFavoriteFood("Ciocolata");
         animal.setActivity("Playing fetch");
+
         AnimalFood food = new AnimalFood("Pedigree");
         food.setFoodAmount(25.3);
         food.setPrice(44);
@@ -38,7 +39,8 @@ public class App
         game.setAnimal(animal);
         game.setVeterinarian(veterinarian);
 
-
+        Adopter.feeding(animal, food);
+        Adopter.activity(activity, animal);
 
     }
 }
