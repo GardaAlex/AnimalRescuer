@@ -21,19 +21,19 @@ public class Adopter {
         this.money = money;
     }
 
-    public void feeding(Animal animal, AnimalFood animalFood){
+    public void feed(Animal animal, AnimalFood animalFood){
         System.out.println(this.name + " just gave some " + animalFood.getName() + " food to " + animal.getName());
 
-        double hungerLevel = animal.getHungryLevel();
-        hungerLevel--;
-        animal.setHungryLevel(hungerLevel);
+        double hungryLevel = animal.getHungryLevel();
+        hungryLevel--;
+        animal.setHungryLevel(hungryLevel);
 
         System.out.println(animal.getName() + "'s hunger level is now: " + animal.getHungryLevel());
     }
 
-    public void activity(RecreationActivity recreationActivity, Animal animal){
+    public void activity(RecreationActivity activity, Animal animal){
 
-        System.out.println(this.name + " will play some " + recreationActivity.getName() + " with " + animal.getName());
+        System.out.println(this.name + " will play some " + activity.getName() + " with " + animal.getName());
 
         animal.setMoodLevel(animal.getMoodLevel() + 1);
 

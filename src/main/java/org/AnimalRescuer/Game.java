@@ -1,10 +1,22 @@
 package org.AnimalRescuer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Game {
 
     private Adopter adopter;
     private Animal animal;
     private Veterinarian veterinarian;
+
+    private AnimalFood[] foodtype = new AnimalFood[5];
+
+    public AnimalFood[] getFood() {
+        return foodtype;
+    }
+    public void insertFood(int index, AnimalFood food){
+        foodtype[index] = food;
+    }
 
     public Adopter getAdopter() {
         return adopter;

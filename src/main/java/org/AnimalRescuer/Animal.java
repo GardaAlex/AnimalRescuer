@@ -1,5 +1,8 @@
 package org.AnimalRescuer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Animal {
 
     private String name;
@@ -9,6 +12,8 @@ public class Animal {
     private double moodLevel;
     private String favoriteFood;
     private String activity;
+
+
 
     public String getName() {
         return name;
@@ -69,4 +74,5 @@ public class Animal {
     public void joy(){
         System.out.println(name + " is feeling positive");
     }
+
 }

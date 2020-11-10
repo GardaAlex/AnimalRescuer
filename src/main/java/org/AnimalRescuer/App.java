@@ -17,18 +17,23 @@ public class App
         animal.setAge(2.3);
         animal.setHealth(8);
         animal.setHungryLevel(8);
-        animal.setMoodLevel(6);
+        animal.setMoodLevel(9);
         animal.setFavoriteFood("Ciocolata");
         animal.setActivity("Playing fetch");
 
-        AnimalFood food = new AnimalFood("Pedigree");
+        RecreationActivity activity = new RecreationActivity("ball throwing");
+
+        AnimalFood food = new AnimalFood();
+        food.setName("Purina");
         food.setFoodAmount(25.3);
         food.setPrice(44);
         food.setStock(true);
         food.setExpiryDate(LocalDateTime.of(2021,11,11,12,00));
 
-        RecreationActivity activity = new RecreationActivity("Walking");
-
+        AnimalFood purina = new AnimalFood();
+        purina.setName("Purina");
+        AnimalFood pedigree = new AnimalFood();
+        pedigree.setName("Pedigree");
 
         Veterinarian veterinarian = new Veterinarian();
         veterinarian.setName("Alex");
@@ -39,8 +44,12 @@ public class App
         game.setAnimal(animal);
         game.setVeterinarian(veterinarian);
 
-        Adopter.feeding(animal, food);
-        Adopter.activity(activity, animal);
+        game.insertFood(0, purina);
+        game.insertFood(1, pedigree);
+        System.out.println(game.getFood()[1].getName());
+
+        adopter.feed(animal, food);
+        adopter.activity(activity, animal);
 
         Animal dog = new Dog();
         dog.setName("Cookie");
