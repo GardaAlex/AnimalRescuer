@@ -44,9 +44,8 @@ public class App
         game.setAnimal(animal);
         game.setVeterinarian(veterinarian);
 
-        game.insertFood(0, purina);
-        game.insertFood(1, pedigree);
-        System.out.println(game.getFood()[1].getName());
+
+
 
         adopter.feed(animal, food);
         adopter.activity(activity, animal);
@@ -58,5 +57,13 @@ public class App
         Animal fish = new Fish();
         fish.setName("Pluto");
         fish.joy();
+
+        game.insertFood(0, purina);
+        game.insertFood(1, pedigree);
+        System.out.println(game.getFood()[1].getName());
+
+        for (int i = 0; i < game.getFood().length; i++){
+            System.out.println(game.getFood()[i].getName());
+        }
     }
 }
