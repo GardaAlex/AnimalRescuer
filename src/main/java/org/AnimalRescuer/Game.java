@@ -18,6 +18,8 @@ public class Game {
         foodtype[index] = food;
     }
 
+
+
     public Adopter getAdopter() {
         return adopter;
     }

@@ -62,8 +62,12 @@ public class App
         game.insertFood(1, pedigree);
         System.out.println(game.getFood()[1].getName());
 
-        for (int i = 0; i < game.getFood().length; i++){
-            System.out.println(game.getFood()[i].getName());
+
+        for (AnimalFood animalFood : game.getFood()){
+            if (animalFood != null){
+                System.out.println(animalFood.getName());
+            }
         }
+
     }
 }
