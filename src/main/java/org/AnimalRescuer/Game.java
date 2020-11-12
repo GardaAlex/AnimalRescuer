@@ -9,16 +9,20 @@ public class Game {
     private Animal animal;
     private Veterinarian veterinarian;
 
-    private AnimalFood[] foodtype = new AnimalFood[5];
+    private List<AnimalFood> availableFood = new ArrayList<AnimalFood>() {
+    };
 
-    public AnimalFood[] getFood() {
-        return foodtype;
-    }
-    public void insertFood(int index, AnimalFood food){
-        foodtype[index] = food;
+    public List<AnimalFood> getAvailableFood() {
+        return availableFood;
     }
 
+    private void initFood(){
+        AnimalFood dogFood = new AnimalFood("Fiskars");
+        availableFood.add(dogFood);
 
+    }
+
+    private RecreationActivity[] availableActivities = new RecreationActivity[5];
 
     public Adopter getAdopter() {
         return adopter;

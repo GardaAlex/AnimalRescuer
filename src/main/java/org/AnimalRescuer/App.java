@@ -58,12 +58,10 @@ public class App
         fish.setName("Pluto");
         fish.joy();
 
-        game.insertFood(0, purina);
-        game.insertFood(1, pedigree);
-        System.out.println(game.getFood()[1].getName());
+        game.getAvailableFood().add(purina);
+        game.getAvailableFood().add(pedigree);
 
-
-        for (AnimalFood animalFood : game.getFood()){
+        for (AnimalFood animalFood : game.getAvailableFood()){
             if (animalFood != null){
                 System.out.println(animalFood.getName());
             }
