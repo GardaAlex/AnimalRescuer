@@ -10,7 +10,9 @@ public class AnimalFood {
     private LocalDateTime expiryDate;
     private boolean stock;
 
-
+    public AnimalFood(String name){
+        this.name = name;
+    }
 
     public String getName() {
         return name;

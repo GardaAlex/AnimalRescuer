@@ -9,20 +9,55 @@ public class Game {
     private Animal animal;
     private Veterinarian veterinarian;
 
-    private List<AnimalFood> availableFood = new ArrayList<AnimalFood>() {
-    };
+    private List<AnimalFood> availableFood = new ArrayList<>();
+    private RecreationActivity[] availableActivities = new RecreationActivity[5];
 
     public List<AnimalFood> getAvailableFood() {
         return availableFood;
     }
 
-    private void initFood(){
-        AnimalFood dogFood = new AnimalFood("Fiskars");
+    private void initAnimalFood(){
+        AnimalFood dogFood = new AnimalFood("Dog Patrol");
+        AnimalFood fishFood = new AnimalFood("Tetra");
         availableFood.add(dogFood);
-
+        availableFood.add(fishFood);
     }
 
-    private RecreationActivity[] availableActivities = new RecreationActivity[5];
+    private void initActivities() {
+        RecreationActivity activity1 = new RecreationActivity("Running");
+        RecreationActivity activity2 = new RecreationActivity("Cycling");
+        availableActivities[0] = activity1;
+        availableActivities[1] = activity2;
+    }
+
+    public void start() {
+        initAnimalFood();
+        initActivities();
+
+        displayAvailableFood();
+        displayAvailableActivities();
+    }
+
+    private void displayAvailableFood() {
+        System.out.println("Available food:");
+        for (AnimalFood food : availableFood) {
+            if (food != null) {
+                System.out.println(food.getName());
+            }
+        }
+    }
+
+    private void displayAvailableActivities() {
+        System.out.println("Available activities:");
+        for (int i = 0; i < availableActivities.length; i++) {
+            if (availableActivities[i] != null) {
+                System.out.println(availableActivities[i].getName());
+            }
+        }
+    }
+
+
+
 
     public Adopter getAdopter() {
         return adopter;

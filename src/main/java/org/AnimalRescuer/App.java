@@ -23,17 +23,12 @@ public class App
 
         RecreationActivity activity = new RecreationActivity("ball throwing");
 
-        AnimalFood food = new AnimalFood();
-        food.setName("Purina");
+        AnimalFood food = new AnimalFood("Purr");
         food.setFoodAmount(25.3);
         food.setPrice(44);
         food.setStock(true);
         food.setExpiryDate(LocalDateTime.of(2021,11,11,12,00));
 
-        AnimalFood purina = new AnimalFood();
-        purina.setName("Purina");
-        AnimalFood pedigree = new AnimalFood();
-        pedigree.setName("Pedigree");
 
         Veterinarian veterinarian = new Veterinarian();
         veterinarian.setName("Alex");
@@ -44,8 +39,7 @@ public class App
         game.setAnimal(animal);
         game.setVeterinarian(veterinarian);
 
-
-
+        game.start();
 
         adopter.feed(animal, food);
         adopter.activity(activity, animal);
@@ -58,14 +52,7 @@ public class App
         fish.setName("Pluto");
         fish.joy();
 
-        game.getAvailableFood().add(purina);
-        game.getAvailableFood().add(pedigree);
 
-        for (AnimalFood animalFood : game.getAvailableFood()){
-            if (animalFood != null){
-                System.out.println(animalFood.getName());
-            }
-        }
 
     }
 }
