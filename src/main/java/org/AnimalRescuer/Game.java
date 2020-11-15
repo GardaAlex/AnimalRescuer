@@ -1,16 +1,21 @@
 package org.AnimalRescuer;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Game {
 
     private Adopter adopter;
     private Animal animal;
     private Veterinarian veterinarian;
+    String ChooseAnimal;
 
     private List<AnimalFood> availableFood = new ArrayList<>();
     private RecreationActivity[] availableActivities = new RecreationActivity[5];
+
+
 
     public List<AnimalFood> getAvailableFood() {
         return availableFood;
@@ -30,10 +35,32 @@ public class Game {
         availableActivities[1] = activity2;
     }
 
+    private void initAnimal() {
+
+        Scanner chooseAnimal = new Scanner(System.in);
+        System.out.println("Please choose dog or cat:");
+
+        String animalOfChoice = chooseAnimal.nextLine();
+
+        System.out.println("The animal that you choose is a " + animalOfChoice);
+        animal.setName(animalOfChoice);
+    }
+
+    private void initAdopter() {
+        Scanner rescuer = new Scanner(System.in);
+        System.out.println("Please enter your name: ");
+        String rescuerName = rescuer.nextLine();
+        System.out.println("Your name is " + rescuerName);
+        adopter.setName(rescuerName);
+
+    }
+
+
     public void start() {
         initAnimalFood();
         initActivities();
-
+        initAnimal();
+        initAdopter();
         displayAvailableFood();
         displayAvailableActivities();
     }

@@ -39,6 +39,7 @@ public class App
         game.setAnimal(animal);
         game.setVeterinarian(veterinarian);
 
+
         game.start();
 
         adopter.feed(animal, food);
@@ -51,6 +52,8 @@ public class App
         Animal fish = new Fish();
         fish.setName("Pluto");
         fish.joy();
+
+        System.out.println(animal.getName());
 
 
 
