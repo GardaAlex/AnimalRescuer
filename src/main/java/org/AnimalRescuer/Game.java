@@ -1,6 +1,5 @@
 package org.AnimalRescuer;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,6 +10,7 @@ public class Game {
     private Animal animal;
     private Veterinarian veterinarian;
     String ChooseAnimal;
+    String rescuerName;
 
     private List<AnimalFood> availableFood = new ArrayList<>();
     private RecreationActivity[] availableActivities = new RecreationActivity[5];
@@ -44,15 +44,18 @@ public class Game {
 
         System.out.println("The animal that you choose is a " + animalOfChoice);
         animal.setName(animalOfChoice);
+        return;
     }
 
     private void initAdopter() {
+        Adopter adopter = new Adopter();
+
         Scanner rescuer = new Scanner(System.in);
         System.out.println("Please enter your name: ");
         String rescuerName = rescuer.nextLine();
         System.out.println("Your name is " + rescuerName);
         adopter.setName(rescuerName);
-
+        return;
     }
 
 
